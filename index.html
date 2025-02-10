@@ -6,11 +6,14 @@
     <title>Be My Valentine?</title>
     <style>
         body {
-            position: relative;
             font-family: Arial, sans-serif;
             background-color: #ef3bc8;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
@@ -20,39 +23,39 @@
             background-color: rgb(29, 221, 160);
             border-radius: 10px;
             width: 60%;
-            margin: 50px auto;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .corner-img {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 80px; /* Adjust size as needed */
+            height: 80px;
             object-fit: cover;
         }
 
         .top-left {
-            top: 15px;
+            top: 10px;
             left: 10px;
         }
 
         .top-right {
-            top: 15px;
+            top: 10px;
             right: 10px;
         }
 
         .bottom-left {
-            bottom: 15px;
+            bottom: 10px;
             left: 10px;
         }
 
         .bottom-right {
-            bottom: 15px;
+            bottom: 10px;
             right: 10px;
         }
 
         h1 {
             color: #ff4081;
+            margin-top: 50px;
         }
 
         .intro, .question, .disclaimer {
@@ -88,12 +91,12 @@
 </head>
 <body>
 
-    <img src="!.jpeg" class="corner-img top-left" alt="Top Left Corner">
-    <img src="silly.JPEG" class="corner-img top-right" alt="Top Right Corner">
-    <img src="with casper.JPEG" class="corner-img bottom-left" alt="Bottom Left Corner">
-    <img src="new years.JPEG" class="corner-img bottom-right" alt="Bottom Right Corner">
-
     <div class="container">
+        <img src="!.jpeg" class="corner-img top-left" alt="Top Left Corner">
+        <img src="new years.JPEG" class="corner-img top-right" alt="Top Right Corner">
+        <img src="silly.JPEG" class="corner-img bottom-left" alt="Bottom Left Corner">
+        <img src="with casper.JPEG" class="corner-img bottom-right" alt="Bottom Right Corner">
+
         <h1>💖 Be My Valentine? 💖</h1>
         <p class="intro">Hey you! 😏 You’ve got my heart—and maybe a few other things—out of control. So, what’s the next move?</p>
         <p class="question">Thinking about being my Valentine again this year? 💘 💘</p>
@@ -118,7 +121,6 @@
                 "Hey! Of course, I'd love to be your Valentine! ❤️ Let's plan something amazing together. 😍" : 
                 "Hey, I need some time to think about it... Maybe we can talk? 😊";
 
-            // For Gmail specifically
             let mailtoUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoUrl;
         }
